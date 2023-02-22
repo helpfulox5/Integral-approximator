@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+long double func (long double input){
+    
+    
+    return sin(input);
+}
+
+
+int main()
+{
+    long double dx = 0.000001;
+    long double sum = 0;
+    
+    cout << "Please enter the lower bound for the integral." << endl;
+    long double lowerbound;
+    cin >> lowerbound;
+    
+    cout << "Please enter the upper bound for the integral." << endl;
+    long double uppbound;
+    cin >> uppbound;
+    
+    for (long double i = lowerbound; i<=uppbound; i+=dx){
+        
+        sum+=dx*func(i);
+        
+        
+    }
+
+    
+    cout << sum;
+    
+
+    return 0;
+}
